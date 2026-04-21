@@ -1,5 +1,5 @@
 export const MASTHEAD = {
-  left: 'Copenhagen · Tuesday May 20th, 2026 · 16:00–19:00',
+  left: 'Copenhagen · Wednesday May 20th, 2026 · 16:00–19:00',
   right: 'Claude Code Community Copenhagen × Applied Futures × Vibraint',
 } as const
 
@@ -12,7 +12,7 @@ export const HERO = {
 } as const
 
 export const FACTS = [
-  { label: 'Date', value: 'Tue May 20th, 2026' },
+  { label: 'Date', value: 'Wed May 20th, 2026' },
   { label: 'Time', value: '16:00 – 19:00' },
   { label: 'Venue', value: 'Mesh Matrikel1, CPH' },
   { label: 'Format', value: '90 min build · real data' },
@@ -74,6 +74,11 @@ export const PROFILES = [
     desc: 'Runs the Claude Code Community Copenhagen and Applied Futures. Brings community framing and product strategy to the event.',
   },
   {
+    role: 'Co-host · Danish Data Science Community',
+    name: 'Diana Meda',
+    desc: 'Co-host from the Claude Code Community and Danish Data Science Community, connecting the data science and AI builder communities in Copenhagen.',
+  },
+  {
     role: 'Neuroscience & Computer Vision Advisor · Vibraint',
     name: 'Johanna Perens',
     desc: 'Co-founder and CTO of Vibraint, responsible for the technical foundation of the platform. Guides the vision of the challenges, bringing deep expertise in whole-brain imaging and computational neuroscience.',
@@ -82,11 +87,6 @@ export const PROFILES = [
     role: 'Data Science & AI Advisor · Danish Cancer Institute',
     name: 'Alicia Parra Acero',
     desc: 'Staff Scientist in AI and computational imaging at the Danish Cancer Institute. Frames the challenge from a data science and AI perspective and supports teams during the build.',
-  },
-  {
-    role: 'Co-host · Danish Data Science Community',
-    name: 'Diana Meda',
-    desc: 'Co-host from the Claude Code Community and Danish Data Science Community, connecting the data science and AI builder communities in Copenhagen.',
   },
 ] as const
 
@@ -117,7 +117,7 @@ export const CTA = {
   emphasis: 'Build something.',
   detail: [
     'Workbar, Community Stage · Mesh Matrikel1 · Copenhagen',
-    'Tuesday May 20th, 2026 · Doors 16:00 · Close 19:00',
+    'Wednesday May 20th, 2026 · Doors 16:00 · Close 19:00',
     'Challenge brief sent after registration',
   ],
   hostedBy: [
