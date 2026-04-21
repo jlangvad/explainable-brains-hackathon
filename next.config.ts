@@ -9,7 +9,7 @@ export default withSentryConfig(nextConfig, {
 
   org: "jlangvad",
 
-  project: "javascript-nextjs",
+  project: "explainable-brains-hackathon",
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
