@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, Lora, JetBrains_Mono } from 'next/font/google'
-import { SITE } from '@/lib/config'
+import { SITE, SITE_URL } from '@/lib/config'
 import './globals.css'
 
 const bebas = Bebas_Neue({
@@ -26,6 +26,7 @@ const mono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: SITE.title,
   description: SITE.description,
   openGraph: {
