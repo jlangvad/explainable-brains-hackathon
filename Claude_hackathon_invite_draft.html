@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explainable Brains Hackathon, Copenhagen, May 20th</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f4ee;
+    --ink: #111010;
+    --dim: #6b6760;
+    --rule: rgba(17,16,16,0.13);
+    --green: #1a7a4a;
+    --green-light: #e8f5ee;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    border-bottom: 2px solid var(--ink);
+    padding: 1.4rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .masthead-left {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .masthead-right {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    color: var(--dim);
+    text-align: right;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 3.5rem 4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .hero-kicker::before {
+    content: '';
+    display: inline-block;
+    width: 1.8rem;
+    height: 1px;
+    background: var(--green);
+  }
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 10vw, 9rem);
+    line-height: 0.9;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  h1 .outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--ink);
+  }
+  .hero-subtitle {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    color: var(--dim);
+    max-width: 52ch;
+    margin-top: 1.8rem;
+    line-height: 1.6;
+    border-left: 3px solid var(--green);
+    padding-left: 1.2rem;
+  }
+
+  /* ── FACT BAR ── */
+  .factbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-top: 3rem;
+  }
+  .fact {
+    padding: 1.5rem 2rem 1.5rem 0;
+    border-right: 1px solid var(--rule);
+  }
+  .fact:last-child { border-right: none; }
+  .fact + .fact { padding-left: 1.8rem; }
+  .fact-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 0.35rem;
+  }
+  .fact-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+  }
+
+  /* ── BODY ── */
+  .body-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3.5rem;
+  }
+
+  /* ── SECTION HEADER ── */
+  .sec-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 3.5rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+  .sec-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    font-weight: 300;
+    color: var(--dim);
+    letter-spacing: 0.15em;
+  }
+  .sec-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* ── WHY — two-col layout ── */
+  .why-body {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 4rem;
+    align-items: start;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* Numbered pillars */
+  .pillars { display: flex; flex-direction: column; }
+
+  .pillar {
+    display: grid;
+    grid-template-columns: 2.8rem 1fr;
+    gap: 1.2rem;
+    padding: 1.6rem 0;
+    border-bottom: 1px solid var(--rule);
+    opacity: 0;
+    transform: translateX(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .pillar:first-child { padding-top: 0; }
+  .pillar.in { opacity: 1; transform: none; }
+
+  .pillar-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    font-weight: 300;
+    color: var(--green);
+    padding-top: 0.2rem;
+    letter-spacing: 0.1em;
+  }
+  .pillar-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+  .pillar-text {
+    font-size: 0.9rem;
+    line-height: 1.72;
+    color: #3a3830;
+  }
+
+  /* Sidebar */
+  .sidebar-box {
+    background: var(--green-light);
+    border-left: 3px solid var(--green);
+    padding: 1.8rem;
+    position: sticky;
+    top: 2rem;
+  }
+  .sidebar-box h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1rem;
+  }
+  .sidebar-box p { font-size: 0.88rem; line-height: 1.7; color: #2a4a38; }
+  .sidebar-box p + p { margin-top: 0.8em; }
+
+  /* ── FORMAT ── */
+  .format-body {
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .format-intro {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    max-width: 68ch;
+    margin-bottom: 2.5rem;
+    color: #2a2925;
+  }
+  .agenda-table { width: 100%; border-collapse: collapse; }
+  .agenda-table tr { border-bottom: 1px solid var(--rule); }
+  .agenda-table td { padding: 0.9rem 0; vertical-align: top; }
+  .agenda-table td:first-child {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--green);
+    width: 5rem;
+    padding-right: 2rem;
+    white-space: nowrap;
+  }
+  .agenda-table td:last-child { font-size: 0.95rem; color: #2a2925; }
+  .agenda-table tr.accent td:last-child { font-weight: 600; color: var(--ink); }
+
+  /* ── WHO ── */
+  .who-body { padding-bottom: 4rem; border-bottom: 1px solid var(--rule); }
+  .who-intro { font-size: 1.05rem; line-height: 1.75; max-width: 68ch; margin-bottom: 2.5rem; color: #2a2925; }
+  .profiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5px;
+    background: var(--rule);
+    margin-bottom: 2rem;
+  }
+  .profile { background: var(--bg); padding: 1.8rem; }
+  .profile-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+  }
+  .profile-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.6rem;
+  }
+  .profile-desc { font-size: 0.82rem; line-height: 1.65; color: var(--dim); }
+
+  /* ── CHALLENGE TEASER ── */
+  .challenge-teaser { padding-bottom: 4rem; border-bottom: 1px solid var(--rule); }
+  .challenge-q {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+    line-height: 1.4;
+    max-width: 28ch;
+    margin-bottom: 1.8rem;
+  }
+  .challenge-note { font-size: 0.95rem; line-height: 1.75; max-width: 64ch; color: #2a2925; }
+  .challenge-note p + p { margin-top: 1em; }
+  .challenge-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.8rem; }
+  .ctag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid var(--rule);
+    padding: 0.4em 0.9em;
+    color: var(--dim);
+  }
+  .ctag.hi { border-color: var(--green); color: var(--green); background: var(--green-light); }
+
+  /* ── CTA ── */
+  .cta-section {
+    padding: 5rem 0 6rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: end;
+  }
+  .cta-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .cta-headline em { font-style: normal; color: var(--green); }
+  .cta-detail {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--dim);
+    margin-top: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+  }
+  .cta-right { display: flex; flex-direction: column; align-items: flex-end; gap: 1rem; }
+  .reg-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--bg);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 1.1em 2.4em;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+  }
+  .reg-btn:hover {
+    background: var(--green);
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  .hosted-by {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-align: right;
+    line-height: 1.8;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 2px solid var(--ink);
+    padding: 1.2rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* ── REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 780px) {
+    .masthead, .hero, .body-wrap, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .hero { padding-top: 3rem; }
+    .factbar { grid-template-columns: 1fr 1fr; }
+    .fact { border-right: none; border-bottom: 1px solid var(--rule); padding-left: 0; }
+    .why-body, .cta-section { grid-template-columns: 1fr; }
+    .profiles { grid-template-columns: 1fr 1fr; }
+    .cta-right { align-items: flex-start; }
+  }
+  @media (max-width: 500px) {
+    .profiles { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-left">Copenhagen · Tuesday May 20th, 2026 · 16:00–19:00</div>
+  <div class="masthead-right">Claude Code Community Copenhagen × Applied Futures × Vibraint</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-kicker">First Claude Code Hackathon Copenhagen</div>
+  <h1>Explainable<br><span class="outline">Brains</span></h1>
+  <p class="hero-subtitle">From signals to understanding — a 3-hour sprint to make complex brain imaging data accessible, interpretable, and actionable.</p>
+  <div class="factbar">
+    <div class="fact">
+      <div class="fact-label">Date</div>
+      <div class="fact-value">Tue May 20th, 2026</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Time</div>
+      <div class="fact-value">16:00 – 19:00</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Venue</div>
+      <div class="fact-value">Mesh Matrikel1, CPH</div>
+    </div>
+    <div class="fact">
+      <div class="fact-label">Format</div>
+      <div class="fact-value">90 min build · real data</div>
+    </div>
+  </div>
+</section>
+
+<div class="body-wrap">
+
+  <!-- ── 01 WHY ── -->
+  <div class="sec-head reveal">
+    <span class="sec-num">01 —</span>
+    <h2 class="sec-title">The Problem Worth Solving</h2>
+  </div>
+
+  <div class="why-body">
+    <div class="pillars">
+
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div>
+          <div class="pillar-title">The Brain Is Under Pressure</div>
+          <p class="pillar-text">Neurological and mental health conditions are among the most widespread and least solved problems in medicine. As populations age and daily life grows more cognitively demanding, the burden on patients, families, healthcare systems, and economies continues to grow.</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div>
+          <div class="pillar-title">Data Is Ahead of Our Tools</div>
+          <p class="pillar-text">CNS drug development has one of the highest failure rates in medicine. It is not for lack of data. Brain research generates vast volumes of imaging, spatial, and molecular information. The problem is that most of it stays locked in specialist pipelines, inaccessible to the people who could act on it. The science is ready. The tooling isn't.</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div>
+          <div class="pillar-title">Brain Health Is a European Priority</div>
+          <p class="pillar-text">Brain health is moving up the political and economic agenda across Europe. The first European Brain Economy Summit convenes in Brussels on 5 May, bringing together policymakers, researchers, and industry leaders around a shared premise: that cognitive capacity is infrastructure, and that investing in it is a strategic, not just a medical, choice.</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <div>
+          <div class="pillar-title">Building at the Intersection</div>
+          <p class="pillar-text">Progress on these problems requires people from very different fields to actually work together, not just talk past each other at conferences. AI tools like Claude Code are lowering the barrier to building functional prototypes fast. This hackathon brings STEM professionals together around a shared problem and a few hours to explore it.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div>
+      <div class="sidebar-box">
+        <h3>About Vibraint</h3>
+        <p>Vibraint builds tools to accelerate drug discovery for brain diseases. Their platform processes complex 3D microscopy scans of rodent brains into interactive, interpretable brain maps.</p>
+        <p>This makes it possible to track how drugs distribute across brain regions, map neural activity patterns in response to treatment, and localise specific receptors and cell types at the scale and resolution that drug development demands.</p>
+        <p>Their customers are neuroscientists in academia, biotech, and pharma working on some of the hardest problems in brain disease research.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 02 FORMAT ── -->
+  <div class="sec-head reveal">
+    <span class="sec-num">02 —</span>
+    <h2 class="sec-title">The Format</h2>
+  </div>
+
+  <div class="format-body reveal">
+    <p class="format-intro">Simple by design. Vibraint presents a real challenge with real data. Teams form across disciplines and build for 90 minutes. Then every team demos a working prototype. No slides, just what you made.</p>
+    <table class="agenda-table">
+      <tr><td>16:00</td><td>Doors open, settle in</td></tr>
+      <tr><td>16:05</td><td>Welcome: Jacob &amp; Diana</td></tr>
+      <tr class="accent"><td>16:10</td><td>Challenges presented: Johanna &amp; Alicia</td></tr>
+      <tr class="accent"><td>16:25</td><td>Teams form and build, 90 minutes</td></tr>
+      <tr><td>17:55</td><td>Demos, 3 min per team</td></tr>
+      <tr><td>18:20</td><td>Judging and wrap-up</td></tr>
+      <tr><td>18:40</td><td>Networking</td></tr>
+      <tr><td>19:00</td><td>Close</td></tr>
+    </table>
+  </div>
+
+  <!-- ── 03 WHO ── -->
+  <div class="sec-head reveal">
+    <span class="sec-num">03 —</span>
+    <h2 class="sec-title">Who's In The Room</h2>
+  </div>
+
+  <div class="who-body reveal">
+    <p class="who-intro">This event brings together people who rarely work in the same room: biologists, data scientists, software engineers, and product people. The challenge is real, the data is real, and the teams are deliberately cross-functional.</p>
+    <div class="profiles">
+      <div class="profile">
+        <div class="profile-role">Host · Claude Code Community / Applied Futures</div>
+        <div class="profile-name">Jacob Langvad Nilsson</div>
+        <p class="profile-desc">Runs the Claude Code Community Copenhagen and Applied Futures. Brings community framing and product strategy to the event.</p>
+      </div>
+      <div class="profile">
+        <div class="profile-role">Neuroscience &amp; Computer Vision Advisor · Vibraint</div>
+        <div class="profile-name">Johanna Perens</div>
+        <p class="profile-desc">Co-founder and CTO of Vibraint, responsible for the technical foundation of the platform. Guides the vision of the challenges, bringing deep expertise in whole-brain imaging and computational neuroscience.</p>
+      </div>
+      <div class="profile">
+        <div class="profile-role">Data Science &amp; AI Advisor · Danish Cancer Institute</div>
+        <div class="profile-name">Alicia Parra Acero</div>
+        <p class="profile-desc">Staff Scientist in AI and computational imaging at the Danish Cancer Institute. Frames the challenge from a data science and AI perspective and supports teams during the build.</p>
+      </div>
+      <div class="profile">
+        <div class="profile-role">Co-host · Danish Data Science Community</div>
+        <div class="profile-name">Diana Meda</div>
+        <p class="profile-desc">Co-host from the Claude Code Community and Danish Data Science Community, connecting the data science and AI builder communities in Copenhagen.</p>
+      </div>
+    </div>
+    <p style="font-size:0.88rem;color:var(--dim);font-style:italic;">Open to all. No neuroscience background required. You bring biology, mathematics, engineering, data science, software, or product thinking, there is a role for all of it.</p>
+  </div>
+
+  <!-- ── 04 CHALLENGE ── -->
+  <div class="sec-head reveal">
+    <span class="sec-num">04 —</span>
+    <h2 class="sec-title">The Challenge</h2>
+  </div>
+
+  <div class="challenge-teaser reveal">
+    <p class="challenge-q">"How can we make brain imaging data accessible and interpretable?"</p>
+    <div class="challenge-note">
+      <p>Vibraint will share the full challenge brief before the event. What we can tell you now: you will work with real brain imaging data and build tools that could help neuroscientists to deep dive into complex brain data to draw conclusions.</p>
+      <p>Teams will approach this from different angles depending on their background. Some will focus on data analysis and visualization, others on building interfaces or AI-powered tools. All approaches are valid. Working prototypes only.</p>
+    </div>
+    <div class="challenge-tags">
+      <span class="ctag hi">Brain Imaging</span>
+      <span class="ctag hi">Claude Code</span>
+      <span class="ctag hi">Computer Vision</span>
+      <span class="ctag">Data Science</span>
+      <span class="ctag">Data Visualization</span>
+      <span class="ctag">Natural Language Interfaces</span>
+      <span class="ctag">Drug Discovery</span>
+      <span class="ctag">Integrative Spatial Biology</span>
+    </div>
+  </div>
+
+  <!-- ── CTA ── -->
+  <div class="cta-section reveal">
+    <div>
+      <h2 class="cta-headline">Register.<br>Show up.<br><em>Build something.</em></h2>
+      <p class="cta-detail">
+        Workbar, Community Stage · Mesh Matrikel1 · Copenhagen<br>
+        Tuesday May 20th, 2026 · Doors 16:00 · Close 19:00<br>
+        Challenge brief sent after registration
+      </p>
+    </div>
+    <div class="cta-right">
+      <a href="#" class="reg-btn">Register Now →</a>
+      <div class="hosted-by">
+        Co-hosted by<br>
+        Claude Code Community Copenhagen<br>
+        Applied Futures · Vibraint
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<script>
+  // Section reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  revealEls.forEach(e => revealObs.observe(e));
+
+  // Pillar stagger reveal
+  const pillars = document.querySelectorAll('.pillar');
+  const pillarObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const idx = Array.from(pillars).indexOf(e.target);
+        setTimeout(() => e.target.classList.add('in'), idx * 120);
+        pillarObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  pillars.forEach(p => pillarObs.observe(p));
+</script>
+
+</body>
+</html>
