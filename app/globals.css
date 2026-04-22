@@ -2,9 +2,24 @@
   --bg: #f7f4ee;
   --ink: #111010;
   --dim: #6b6760;
+  --text: #2a2925;
   --rule: rgba(17,16,16,0.13);
   --green: #1a7a4a;
   --green-light: #e8f5ee;
+  --sidebar-text: #2a4a38;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #151518;
+  --ink: #e8e6e1;
+  --dim: #9a968f;
+  --text: #c5c2bb;
+  --rule: rgba(255,255,255,0.12);
+  --green: #34d67a;
+  --green-light: #1a2e22;
+  --sidebar-text: #8cc9a3;
+  color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,6 +57,29 @@ body {
   letter-spacing: 0.12em;
   color: var(--dim);
   text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* ── THEME TOGGLE ── */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--rule);
+  color: var(--dim);
+  font-size: 1.1rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  line-height: 1;
+}
+.theme-toggle:hover {
+  color: var(--ink);
+  border-color: var(--ink);
 }
 
 /* ── HERO ── */
@@ -93,11 +131,18 @@ h1 .outline {
   border-left: 3px solid var(--green);
   padding-left: 1.2rem;
 }
+.hero-intro {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 68ch;
+  margin-top: 2.5rem;
+}
 
 /* ── FACT BAR ── */
 .factbar {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
   margin-top: 3rem;
@@ -200,7 +245,7 @@ h1 .outline {
 .pillar-text {
   font-size: 0.9rem;
   line-height: 1.72;
-  color: #3a3830;
+  color: var(--text);
 }
 
 /* Sidebar */
@@ -220,7 +265,7 @@ h1 .outline {
   color: var(--green);
   margin-bottom: 1rem;
 }
-.sidebar-box p { font-size: 0.88rem; line-height: 1.7; color: #2a4a38; }
+.sidebar-box p { font-size: 0.88rem; line-height: 1.7; color: var(--sidebar-text); }
 .sidebar-box p + p { margin-top: 0.8em; }
 
 /* ── FORMAT ── */
@@ -233,7 +278,7 @@ h1 .outline {
   line-height: 1.75;
   max-width: 68ch;
   margin-bottom: 2.5rem;
-  color: #2a2925;
+  color: var(--text);
 }
 .agenda-table { width: 100%; border-collapse: collapse; }
 .agenda-table tr { border-bottom: 1px solid var(--rule); }
@@ -247,12 +292,12 @@ h1 .outline {
   padding-right: 2rem;
   white-space: nowrap;
 }
-.agenda-table td:last-child { font-size: 0.95rem; color: #2a2925; }
+.agenda-table td:last-child { font-size: 0.95rem; color: var(--text); }
 .agenda-table tr.accent td:last-child { font-weight: 600; color: var(--ink); }
 
 /* ── WHO ── */
 .who-body { padding-bottom: 4rem; border-bottom: 1px solid var(--rule); }
-.who-intro { font-size: 1.05rem; line-height: 1.75; max-width: 68ch; margin-bottom: 2.5rem; color: #2a2925; }
+.who-intro { font-size: 1.05rem; line-height: 1.75; max-width: 68ch; margin-bottom: 2.5rem; color: var(--text); }
 .profiles {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -290,7 +335,7 @@ h1 .outline {
   max-width: 28ch;
   margin-bottom: 1.8rem;
 }
-.challenge-note { font-size: 0.95rem; line-height: 1.75; max-width: 64ch; color: #2a2925; }
+.challenge-note { font-size: 0.95rem; line-height: 1.75; max-width: 64ch; color: var(--text); }
 .challenge-note p + p { margin-top: 1em; }
 .challenge-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.8rem; }
 .ctag {
@@ -360,20 +405,84 @@ h1 .outline {
   line-height: 1.8;
 }
 
+/* ── SPONSOR STRIP ── */
+.sponsor-strip {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding: 2rem 2.5rem;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+}
+.sponsor-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.sponsor-label {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.sponsor-logo { color: var(--ink); }
+.sponsor-logo--anthropic {
+  height: 1.5rem;
+  width: auto;
+}
+.sponsor-logo--claude-icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  flex-shrink: 0;
+}
+.sponsor-divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--rule);
+}
+.sponsor-claude {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.sponsor-claude-text {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
 /* ── REVEAL ── */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.in { opacity: 1; transform: none; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 780px) {
-  .masthead, .hero, .body-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
-  .hero { padding-top: 3rem; }
+  .masthead { padding-left: 1.5rem; padding-right: 1.5rem; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .masthead-right { text-align: left; }
+  .hero, .body-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .hero { padding-top: 3rem; padding-bottom: 3rem; }
+  .sponsor-strip { padding: 1.5rem 1.8rem; gap: 1.8rem; }
   .factbar { grid-template-columns: 1fr 1fr; }
   .fact { border-right: none; border-bottom: 1px solid var(--rule); padding-left: 0; }
   .why-body, .cta-section { grid-template-columns: 1fr; }
-  .profiles { grid-template-columns: 1fr 1fr; }
+  .cta-section { gap: 2rem; }
   .cta-right { align-items: flex-start; }
+  .profiles { grid-template-columns: 1fr 1fr; }
+  .sidebar-box { position: static; }
+  .sec-head { padding: 2.5rem 0 1.5rem; }
+  .pillar { grid-template-columns: 2rem 1fr; gap: 0.8rem; }
 }
 @media (max-width: 500px) {
+  .masthead, .hero, .body-wrap { padding-left: 1.2rem; padding-right: 1.2rem; }
+  .sponsor-strip { flex-direction: column; align-items: flex-start; gap: 1.5rem; padding: 1.4rem 1.2rem; }
+  .sponsor-divider { width: 100%; height: 1px; align-self: auto; }
+  .factbar { grid-template-columns: 1fr; }
   .profiles { grid-template-columns: 1fr; }
+  .challenge-tags { gap: 0.4rem; }
+  .ctag { font-size: 0.56rem; padding: 0.35em 0.7em; }
 }

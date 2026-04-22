@@ -8,13 +8,16 @@ export const HERO = {
   titleTop: 'Explainable',
   titleBottom: 'Brains',
   subtitle:
-    'From signals to understanding — a 3-hour sprint to make complex brain imaging data accessible, interpretable, and actionable.',
+    'From signals to understanding: A 3-hour sprint to make complex brain data accessible, interpretable, and actionable.',
+  intro:
+    'Neurological conditions are among the fastest-growing health challenges globally, yet the brain remains largely a mystery. Understanding the brain depends on our ability to extract meaning from vast and complex datasets. The latest AI coding tools like Claude Code are rapidly expanding opportunities for innovating on practical solutions to problems that haven\u2019t been solvable before. Join us for a hackathon bringing together professionals from across fields to turn that potential into reality.',
 } as const
 
 export const FACTS = [
   { label: 'Date', value: 'Wed May 20th, 2026' },
   { label: 'Time', value: '16:00 – 19:00' },
   { label: 'Venue', value: 'Mesh Matrikel1, CPH' },
+  { label: 'Participants', value: '60 seats' },
   { label: 'Format', value: '90 min build · real data' },
 ] as const
 
