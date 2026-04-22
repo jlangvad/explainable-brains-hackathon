@@ -1,6 +1,7 @@
 import { Reveal } from './Reveal'
-import { CTA } from '@/lib/content'
-import { REGISTER_URL } from '@/lib/config'
+import { CTA, CTA_VENUE_LINE } from '@/lib/content'
+import { REGISTER_URL, VENUE_MAPS_URL } from '@/lib/config'
+import { ThemeToggle } from './ThemeToggle'
 
 export function CtaSection() {
   return (
@@ -16,6 +17,14 @@ export function CtaSection() {
           <em>{CTA.emphasis}</em>
         </h2>
         <p className="cta-detail">
+          <span>
+            {CTA_VENUE_LINE.before}
+            <a href={VENUE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="map-link">
+              {CTA_VENUE_LINE.place}
+              <span className="sr-only"> (opens in new tab)</span>
+            </a>
+            <br />
+          </span>
           {CTA.detail.map((line, i) => (
             <span key={i}>
               {line}
@@ -30,8 +39,9 @@ export function CtaSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="reg-btn"
+          aria-label="Register now (opens in new tab)"
         >
-          {CTA.buttonLabel}
+          Register Now <span aria-hidden="true">&rarr;</span>
         </a>
         <div className="hosted-by">
           {CTA.hostedBy.map((line, i) => (
@@ -40,6 +50,9 @@ export function CtaSection() {
               {i < CTA.hostedBy.length - 1 && <br />}
             </span>
           ))}
+        </div>
+        <div className="footer-theme-toggle">
+          <ThemeToggle />
         </div>
       </div>
     </Reveal>

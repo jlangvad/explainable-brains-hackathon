@@ -1,5 +1,8 @@
 export const REGISTER_URL = 'https://luma.com/aes5eyzk'
 
+export const VENUE_MAPS_URL =
+  'https://www.google.com/maps/search/?api=1&query=Mesh+Matrikel1+Copenhagen'
+
 export const SITE = {
   title: 'Explainable Brains Hackathon — Copenhagen, May 20th',
   description:

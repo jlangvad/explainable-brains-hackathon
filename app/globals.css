@@ -504,16 +504,16 @@ a.map-link:visited {
 }
 .sponsor-logo { color: var(--ink); }
 .sponsor-logo--anthropic {
-  height: 1.5rem;
+  height: 1.4rem;
   width: auto;
 }
 .sponsor-logo--claude-icon {
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 1.6rem;
+  width: 1.6rem;
   flex-shrink: 0;
 }
 .sponsor-logo--vibraint {
-  height: 1.6rem;
+  height: 2.2rem;
   width: auto;
 }
 .sponsor-divider {

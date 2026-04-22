@@ -8,15 +8,15 @@ export function WhoSection() {
       <SectionHeader num="03" title="Who's In The Room" />
       <Reveal className="who-body">
         <p className="who-intro">{WHO_INTRO}</p>
-        <div className="profiles">
+        <ul className="profiles" role="list">
           {PROFILES.map(p => (
-            <div key={p.name} className="profile">
+            <li key={p.name} className="profile">
               <div className="profile-role">{p.role}</div>
               <div className="profile-name">{p.name}</div>
               <p className="profile-desc">{p.desc}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
         <p className="who-footnote">{WHO_FOOTNOTE}</p>
       </Reveal>
     </>

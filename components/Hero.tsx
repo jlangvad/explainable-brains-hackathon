@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { HERO, FACTS } from '@/lib/content'
-
-const VENUE_MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Mesh+Matrikel1+Copenhagen'
+import { VENUE_MAPS_URL } from '@/lib/config'
 
 export function Hero() {
   return (
@@ -40,6 +39,17 @@ export function Hero() {
             <span className="sponsor-claude-text">Claude Code</span>
           </div>
         </div>
+        <div className="sponsor-divider" aria-hidden="true" />
+        <div className="sponsor-block">
+          <span className="sponsor-label">Partner</span>
+          <Image
+            src="/vibraint-logo.svg"
+            alt="Vibraint"
+            width={160}
+            height={32}
+            className="sponsor-logo sponsor-logo--vibraint"
+          />
+        </div>
       </div>
 
       <div className="factbar">
@@ -48,8 +58,14 @@ export function Hero() {
             <div className="fact-label">{f.label}</div>
             <div className="fact-value">
               {f.label === 'Venue' ? (
-                <a href={VENUE_MAPS_URL} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={VENUE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="map-link"
+                >
                   {f.value}
+                  <span className="sr-only"> (opens in new tab)</span>
                 </a>
               ) : (
                 f.value

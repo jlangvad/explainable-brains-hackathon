@@ -9,15 +9,20 @@ import { CtaSection } from '@/components/CtaSection'
 export default function Page() {
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Masthead />
-      <Hero />
-      <div className="body-wrap">
-        <WhySection />
-        <FormatSection />
-        <WhoSection />
-        <ChallengeSection />
-        <CtaSection />
-      </div>
+      <main id="main-content">
+        <Hero />
+        <div className="body-wrap">
+          <WhySection />
+          <FormatSection />
+          <WhoSection />
+          <ChallengeSection />
+          <CtaSection />
+        </div>
+      </main>
     </>
   )
 }

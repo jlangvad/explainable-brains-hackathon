@@ -8,7 +8,13 @@ export function FormatSection() {
       <SectionHeader num="02" title="The Format" />
       <Reveal className="format-body">
         <p className="format-intro">{FORMAT_INTRO}</p>
-        <table className="agenda-table">
+        <table className="agenda-table" aria-label="Event agenda">
+          <thead className="sr-only">
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Activity</th>
+            </tr>
+          </thead>
           <tbody>
             {AGENDA.map(row => (
               <tr key={row.time} className={row.accent ? 'accent' : undefined}>

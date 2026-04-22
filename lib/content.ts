@@ -16,9 +16,9 @@ export const HERO = {
 export const FACTS = [
   { label: 'Date', value: 'Wed May 20th, 2026' },
   { label: 'Time', value: '16:00 – 19:00' },
-  { label: 'Venue', value: 'Mesh Matrikel1, CPH' },
+  { label: 'Venue', value: 'Mesh Matrikel1, Copenhagen' },
   { label: 'Participants', value: '60 seats' },
-  { label: 'Format', value: '90 min build · real data' },
+  { label: 'Format', value: '90 min build · Real Brain Data' },
 ] as const
 
 export const PILLARS = [
@@ -74,12 +74,12 @@ export const PROFILES = [
   {
     role: 'Host · Claude Code Community / Applied Futures',
     name: 'Jacob Langvad Nilsson',
-    desc: 'Runs the Claude Code Community Copenhagen and Applied Futures. Brings community framing and product strategy to the event.',
+    desc: 'Claude Community Ambassador and co-founder of Applied Futures. Brings community framing and product strategy to the event.',
   },
   {
     role: 'Co-host · Danish Data Science Community',
     name: 'Diana Meda',
-    desc: 'Co-host from the Claude Code Community and Danish Data Science Community, connecting the data science and AI builder communities in Copenhagen.',
+    desc: 'AI & Data Engineer and co-host from the Claude Code Community and Danish Data Science Community, connecting the data science and AI builder communities in Copenhagen.',
   },
   {
     role: 'Neuroscience & Computer Vision Advisor · Vibraint',
@@ -115,11 +115,15 @@ export const TAGS: Array<{ label: string; hi?: boolean }> = [
   { label: 'Integrative Spatial Biology' },
 ]
 
+export const CTA_VENUE_LINE = {
+  before: 'Workbar, Community Stage · ',
+  place: 'Mesh Matrikel1 · Copenhagen',
+} as const
+
 export const CTA = {
   lines: ['Register.', 'Show up.'],
   emphasis: 'Build something.',
   detail: [
-    'Workbar, Community Stage · Mesh Matrikel1 · Copenhagen',
     'Wednesday May 20th, 2026 · Doors 16:00 · Close 19:00',
     'Challenge brief sent after registration',
   ],
