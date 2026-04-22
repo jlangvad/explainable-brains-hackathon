@@ -24,12 +24,59 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── ACCESSIBILITY UTILITIES ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.8em 1.5em;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ── FOCUS STYLES ── */
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
 body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-lora), serif;
   font-size: 16px;
   line-height: 1.65;
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal, .pillar { opacity: 1; transform: none; }
 }
 
 /* ── MASTHEAD ── */
@@ -44,7 +91,7 @@ body {
 }
 .masthead-left {
   font-family: var(--font-mono), monospace;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 300;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -52,7 +99,7 @@ body {
 }
 .masthead-right {
   font-family: var(--font-mono), monospace;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 300;
   letter-spacing: 0.12em;
   color: var(--dim);
@@ -155,7 +202,7 @@ h1 .outline {
 .fact + .fact { padding-left: 1.8rem; }
 .fact-label {
   font-family: var(--font-mono), monospace;
-  font-size: 0.58rem;
+  font-size: 0.68rem;
   font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -167,6 +214,20 @@ h1 .outline {
   font-size: 1.3rem;
   letter-spacing: 0.03em;
   line-height: 1.2;
+  color: var(--ink);
+}
+a.map-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1.5px;
+}
+a.map-link:hover {
+  text-decoration-thickness: 2.5px;
+}
+a.map-link:visited {
+  color: inherit;
 }
 
 /* ── BODY ── */
@@ -187,7 +248,7 @@ h1 .outline {
 }
 .sec-num {
   font-family: var(--font-mono), monospace;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 300;
   color: var(--dim);
   letter-spacing: 0.15em;
@@ -227,7 +288,7 @@ h1 .outline {
 
 .pillar-num {
   font-family: var(--font-mono), monospace;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 300;
   color: var(--green);
   padding-top: 0.2rem;
@@ -255,6 +316,15 @@ h1 .outline {
   padding: 1.8rem;
   position: sticky;
   top: 2rem;
+}
+.sidebar-logo {
+  display: block;
+  height: 1.6rem;
+  width: auto;
+  margin-bottom: 1.2rem;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
 }
 .sidebar-box h3 {
   font-family: var(--font-mono), monospace;
@@ -305,10 +375,11 @@ h1 .outline {
   background: var(--rule);
   margin-bottom: 2rem;
 }
+.profiles { list-style: none; }
 .profile { background: var(--bg); padding: 1.8rem; }
 .profile-role {
   font-family: var(--font-mono), monospace;
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   font-weight: 400;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -340,7 +411,7 @@ h1 .outline {
 .challenge-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.8rem; }
 .ctag {
   font-family: var(--font-mono), monospace;
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   font-weight: 300;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -396,13 +467,16 @@ h1 .outline {
 }
 .hosted-by {
   font-family: var(--font-mono), monospace;
-  font-size: 0.58rem;
+  font-size: 0.68rem;
   font-weight: 300;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--dim);
   text-align: right;
   line-height: 1.8;
+}
+.footer-theme-toggle {
+  margin-top: 0.25rem;
 }
 
 /* ── SPONSOR STRIP ── */
@@ -422,7 +496,7 @@ h1 .outline {
 }
 .sponsor-label {
   font-family: var(--font-mono), monospace;
-  font-size: 0.6rem;
+  font-size: 0.68rem;
   font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -437,6 +511,10 @@ h1 .outline {
   height: 1.8rem;
   width: 1.8rem;
   flex-shrink: 0;
+}
+.sponsor-logo--vibraint {
+  height: 1.6rem;
+  width: auto;
 }
 .sponsor-divider {
   width: 1px;
@@ -472,6 +550,7 @@ h1 .outline {
   .why-body, .cta-section { grid-template-columns: 1fr; }
   .cta-section { gap: 2rem; }
   .cta-right { align-items: flex-start; }
+  .footer-theme-toggle { margin-top: 0.5rem; }
   .profiles { grid-template-columns: 1fr 1fr; }
   .sidebar-box { position: static; }
   .sec-head { padding: 2.5rem 0 1.5rem; }
@@ -484,5 +563,5 @@ h1 .outline {
   .factbar { grid-template-columns: 1fr; }
   .profiles { grid-template-columns: 1fr; }
   .challenge-tags { gap: 0.4rem; }
-  .ctag { font-size: 0.56rem; padding: 0.35em 0.7em; }
+  .ctag { font-size: 0.65rem; padding: 0.35em 0.7em; }
 }
