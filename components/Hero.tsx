@@ -12,9 +12,49 @@ export function Hero() {
         {HERO.titleBottom}{' '}
         <span className="outline">{HERO.titleSuffix}</span>
       </h1>
-      <p className="hero-subtitle">{HERO.subtitle}</p>
-      <p className="hero-definition">{HERO.definition}</p>
-      <p className="hero-intro">{HERO.intro}</p>
+      <div className="hero-body">
+        <div className="hero-copy">
+          <p className="hero-subtitle">{HERO.subtitle}</p>
+          <p className="hero-definition">{HERO.definition}</p>
+          <p className="hero-intro">{HERO.intro}</p>
+        </div>
+        <aside className="hero-sponsors" aria-label="Sponsors and partners">
+          <div className="sponsor-strip sponsor-strip--vertical">
+            <div className="sponsor-block">
+              <span className="sponsor-label">Sponsored by</span>
+              <Image
+                src="/Anthropic_logo.svg"
+                alt="Anthropic"
+                width={180}
+                height={22}
+                className="sponsor-logo sponsor-logo--anthropic"
+              />
+            </div>
+            <div className="sponsor-divider" aria-hidden="true" />
+            <div className="sponsor-block">
+              <span className="sponsor-label">Built with</span>
+              <Image
+                src="/claude-logo_brandlogos.net_yx32y.png"
+                alt="Claude Code"
+                width={524}
+                height={113}
+                className="sponsor-logo sponsor-logo--claude"
+              />
+            </div>
+            <div className="sponsor-divider" aria-hidden="true" />
+            <div className="sponsor-block">
+              <span className="sponsor-label">Partner</span>
+              <Image
+                src="/vibraint-logo.svg"
+                alt="Vibraint"
+                width={160}
+                height={32}
+                className="sponsor-logo sponsor-logo--vibraint"
+              />
+            </div>
+          </div>
+        </aside>
+      </div>
 
       <div className="hero-cta">
         <a
@@ -27,44 +67,6 @@ export function Hero() {
           Register Now <span aria-hidden="true">&rarr;</span>
         </a>
         <span className="hero-cta-note">Free · 60 seats · Challenge brief sent after registration</span>
-      </div>
-
-      <div className="sponsor-strip">
-        <div className="sponsor-block">
-          <span className="sponsor-label">Sponsored by</span>
-          <Image
-            src="/Anthropic_logo.svg"
-            alt="Anthropic"
-            width={180}
-            height={22}
-            className="sponsor-logo sponsor-logo--anthropic"
-          />
-        </div>
-        <div className="sponsor-divider" aria-hidden="true" />
-        <div className="sponsor-block">
-          <span className="sponsor-label">Built with</span>
-          <div className="sponsor-claude">
-            <Image
-              src="/anthropic-1.svg"
-              alt=""
-              width={28}
-              height={28}
-              className="sponsor-logo sponsor-logo--claude-icon"
-            />
-            <span className="sponsor-claude-text">Claude Code</span>
-          </div>
-        </div>
-        <div className="sponsor-divider" aria-hidden="true" />
-        <div className="sponsor-block">
-          <span className="sponsor-label">Partner</span>
-          <Image
-            src="/vibraint-logo.svg"
-            alt="Vibraint"
-            width={160}
-            height={32}
-            className="sponsor-logo sponsor-logo--vibraint"
-          />
-        </div>
       </div>
 
       <dl className="factbar">

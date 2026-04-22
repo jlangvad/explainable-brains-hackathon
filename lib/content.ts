@@ -1,6 +1,8 @@
 export const MASTHEAD = {
   left: 'Copenhagen · Wednesday May 20th, 2026 · 16:00–19:00',
-  right: 'Claude Code Community Copenhagen × Applied Futures × Vibraint',
+  rightCommunity: 'Claude Code Community Copenhagen',
+  rightAppliedFutures: 'Applied Futures',
+  rightVibraint: 'Vibraint',
 } as const
 
 export const HERO = {
