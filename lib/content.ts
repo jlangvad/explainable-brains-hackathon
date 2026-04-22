@@ -106,7 +106,7 @@ export const PROFILES = [
 ] as const
 
 export const WHO_FOOTNOTE =
-  'Open to all. No neuroscience background required. You bring biology, mathematics, engineering, data science, software, or product thinking, there is a role for all of it.'
+  'Aimed at STEM students, graduates, and young professionals—including product management. No neuroscience background required. Cross-functional teams mix backgrounds so everyone has a role in the build.'
 
 export const CHALLENGE = {
   question: '\u201CHow can we make brain imaging data accessible and interpretable?\u201D',
@@ -141,7 +141,7 @@ export const CTA = {
 export const FAQ = [
   {
     q: 'Who can participate?',
-    a: 'The hackathon is open to all. No neuroscience background required. Whether you bring biology, mathematics, engineering, data science, software, or product thinking, there is a role for you. Teams are deliberately cross-functional.',
+    a: 'The hackathon is for STEM students, graduates, and young professionals—including product management and adjacent roles. No neuroscience background is required. Teams are deliberately cross-functional so different backgrounds work together during the build.',
   },
   {
     q: 'What data will teams work with?',
@@ -157,6 +157,6 @@ export const FAQ = [
   },
   {
     q: 'Where exactly is the venue?',
-    a: 'Mesh Matrikel1, Gothersgade 11, 1123 Copenhagen K, Denmark. The event takes place at the Workbar Community Stage.',
+    a: 'Mesh Matrikel1 (Matrikel1 Workbar), Højbro Plads 10, 1200 Copenhagen K, Denmark. The event takes place at the Workbar Community Stage.',
   },
 ] as const

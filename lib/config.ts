@@ -1,7 +1,7 @@
 export const REGISTER_URL = 'https://luma.com/aes5eyzk'
 
 export const VENUE_MAPS_URL =
-  'https://www.google.com/maps/search/?api=1&query=Mesh+Matrikel1+Copenhagen'
+  'https://www.google.com/maps/search/?api=1&query=H%C3%B8jbro+Plads+10%2C+1200+K%C3%B8benhavn+K%2C+Denmark'
 
 export const APPLIED_FUTURES_URL = 'https://appliedfutures.io/'
 

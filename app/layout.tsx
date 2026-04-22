@@ -82,8 +82,8 @@ const jsonLd = {
         name: 'Mesh Matrikel1',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Gothersgade 11',
-          postalCode: '1123',
+          streetAddress: 'Højbro Plads 10',
+          postalCode: '1200',
           addressLocality: 'Copenhagen',
           addressRegion: 'Capital Region',
           addressCountry: 'DK',
@@ -176,7 +176,7 @@ const jsonLd = {
           name: 'Do I need a neuroscience background to participate?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'No. The hackathon is open to all. Whether you bring biology, mathematics, engineering, data science, software, or product thinking, there is a role for you. Teams are deliberately cross-functional.',
+            text: 'No. The hackathon is for STEM students, graduates, and young professionals—including product management and adjacent roles. No neuroscience background is required. Teams are deliberately cross-functional.',
           },
         },
         {
@@ -184,7 +184,7 @@ const jsonLd = {
           name: 'When and where is the hackathon?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Wednesday May 20, 2026 from 16:00 to 19:00 at Mesh Matrikel1, Gothersgade 11, 1123 Copenhagen, Denmark.',
+            text: 'Wednesday May 20, 2026 from 16:00 to 19:00 at Mesh Matrikel1, Højbro Plads 10, 1200 Copenhagen K, Denmark.',
           },
         },
         {
