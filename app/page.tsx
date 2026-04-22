@@ -4,6 +4,7 @@ import { WhySection } from '@/components/WhySection'
 import { FormatSection } from '@/components/FormatSection'
 import { WhoSection } from '@/components/WhoSection'
 import { ChallengeSection } from '@/components/ChallengeSection'
+import { FaqSection } from '@/components/FaqSection'
 import { CtaSection } from '@/components/CtaSection'
 
 export default function Page() {
@@ -20,6 +21,7 @@ export default function Page() {
           <FormatSection />
           <WhoSection />
           <ChallengeSection />
+          <FaqSection />
           <CtaSection />
         </div>
       </main>

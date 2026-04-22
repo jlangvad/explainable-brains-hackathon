@@ -1,18 +1,33 @@
 import Image from 'next/image'
 import { HERO, FACTS } from '@/lib/content'
-import { VENUE_MAPS_URL } from '@/lib/config'
+import { REGISTER_URL, VENUE_MAPS_URL } from '@/lib/config'
 
 export function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="hero-kicker">{HERO.kicker}</div>
       <h1>
         {HERO.titleTop}
         <br />
-        <span className="outline">{HERO.titleBottom}</span>
+        {HERO.titleBottom}{' '}
+        <span className="outline">{HERO.titleSuffix}</span>
       </h1>
       <p className="hero-subtitle">{HERO.subtitle}</p>
+      <p className="hero-definition">{HERO.definition}</p>
       <p className="hero-intro">{HERO.intro}</p>
+
+      <div className="hero-cta">
+        <a
+          href={REGISTER_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="reg-btn"
+          aria-label="Register now (opens in new tab)"
+        >
+          Register Now <span aria-hidden="true">&rarr;</span>
+        </a>
+        <span className="hero-cta-note">Free · 60 seats · Challenge brief sent after registration</span>
+      </div>
 
       <div className="sponsor-strip">
         <div className="sponsor-block">
@@ -52,11 +67,11 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="factbar">
+      <dl className="factbar">
         {FACTS.map(f => (
           <div key={f.label} className="fact">
-            <div className="fact-label">{f.label}</div>
-            <div className="fact-value">
+            <dt className="fact-label">{f.label}</dt>
+            <dd className="fact-value">
               {f.label === 'Venue' ? (
                 <a
                   href={VENUE_MAPS_URL}
@@ -67,13 +82,17 @@ export function Hero() {
                   {f.value}
                   <span className="sr-only"> (opens in new tab)</span>
                 </a>
+              ) : f.label === 'Date' ? (
+                <time dateTime="2026-05-20">{f.value}</time>
+              ) : f.label === 'Time' ? (
+                <time dateTime="16:00/19:00">{f.value}</time>
               ) : (
                 f.value
               )}
-            </div>
+            </dd>
           </div>
         ))}
-      </div>
+      </dl>
     </section>
   )
 }

@@ -32,7 +32,7 @@ export function PillarList() {
         <div key={p.n} className="pillar">
           <div className="pillar-num">{p.n}</div>
           <div>
-            <div className="pillar-title">{p.title}</div>
+            <h3 className="pillar-title">{p.title}</h3>
             <p className="pillar-text">{p.text}</p>
           </div>
         </div>

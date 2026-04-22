@@ -7,18 +7,28 @@ export const HERO = {
   kicker: 'First Claude Code Hackathon Copenhagen',
   titleTop: 'Explainable',
   titleBottom: 'Brains',
+  titleSuffix: 'Hackathon',
   subtitle:
     'From signals to understanding: A 3-hour sprint to make complex brain data accessible, interpretable, and actionable.',
+  definition:
+    'The Explainable Brains Hackathon is a free neuroscience and AI hackathon in Copenhagen, Denmark. Cross-disciplinary teams use Claude Code and real brain imaging data from Vibraint to build tools that make complex brain data interpretable for drug discovery.',
   intro:
     'Neurological conditions are among the fastest-growing health challenges globally, yet the brain remains largely a mystery. Understanding the brain depends on our ability to extract meaning from vast and complex datasets. The latest AI coding tools like Claude Code are rapidly expanding opportunities for innovating on practical solutions to problems that haven\u2019t been solvable before. Join us for a hackathon bringing together professionals from across fields to turn that potential into reality.',
 } as const
 
+export const CTA_VENUE_LINE = {
+  before: 'Workbar, Community Stage · ',
+  place: 'Mesh Matrikel1 · Copenhagen',
+} as const
+
+export const VENUE_FULL_LINE = `${CTA_VENUE_LINE.before}${CTA_VENUE_LINE.place}` as const
+
 export const FACTS = [
-  { label: 'Date', value: 'Wed May 20th, 2026' },
+  { label: 'Date', value: 'Wednesday May 20th, 2026' },
   { label: 'Time', value: '16:00 – 19:00' },
-  { label: 'Venue', value: 'Mesh Matrikel1, Copenhagen' },
+  { label: 'Venue', value: VENUE_FULL_LINE },
   { label: 'Participants', value: '60 seats' },
-  { label: 'Format', value: '90 min build · Real Brain Data' },
+  { label: 'Cost', value: 'Free' },
 ] as const
 
 export const PILLARS = [
@@ -35,7 +45,7 @@ export const PILLARS = [
   {
     n: '03',
     title: 'Brain Health Is a European Priority',
-    text: 'Brain health is moving up the political and economic agenda across Europe. The first European Brain Economy Summit convenes in Brussels on 5 May, bringing together policymakers, researchers, and industry leaders around a shared premise: that cognitive capacity is infrastructure, and that investing in it is a strategic, not just a medical, choice.',
+    text: 'Brain health is moving up the political and economic agenda across Europe. The first European Brain Economy Summit convenes in Brussels on 5 May 2026, bringing together policymakers, researchers, and industry leaders around a shared premise: that cognitive capacity is infrastructure, and that investing in it is a strategic, not just a medical, choice.',
   },
   {
     n: '04',
@@ -97,7 +107,7 @@ export const WHO_FOOTNOTE =
   'Open to all. No neuroscience background required. You bring biology, mathematics, engineering, data science, software, or product thinking, there is a role for all of it.'
 
 export const CHALLENGE = {
-  question: '"How can we make brain imaging data accessible and interpretable?"',
+  question: '\u201CHow can we make brain imaging data accessible and interpretable?\u201D',
   paragraphs: [
     'Vibraint will share the full challenge brief before the event. What we can tell you now: you will work with real brain imaging data and build tools that could help neuroscientists to deep dive into complex brain data to draw conclusions.',
     'Teams will approach this from different angles depending on their background. Some will focus on data analysis and visualization, others on building interfaces or AI-powered tools. All approaches are valid. Working prototypes only.',
@@ -115,11 +125,6 @@ export const TAGS: Array<{ label: string; hi?: boolean }> = [
   { label: 'Integrative Spatial Biology' },
 ]
 
-export const CTA_VENUE_LINE = {
-  before: 'Workbar, Community Stage · ',
-  place: 'Mesh Matrikel1 · Copenhagen',
-} as const
-
 export const CTA = {
   lines: ['Register.', 'Show up.'],
   emphasis: 'Build something.',
@@ -127,10 +132,29 @@ export const CTA = {
     'Wednesday May 20th, 2026 · Doors 16:00 · Close 19:00',
     'Challenge brief sent after registration',
   ],
-  hostedBy: [
-    'Co-hosted by',
-    'Claude Code Community Copenhagen',
-    'Applied Futures · Vibraint',
-  ],
-  buttonLabel: 'Register Now →',
+  hostedBy: ['Co-hosted by', 'Claude Code Community Copenhagen'],
+  buttonLabel: 'Register Now \u2192',
 } as const
+
+export const FAQ = [
+  {
+    q: 'Who can participate?',
+    a: 'The hackathon is open to all. No neuroscience background required. Whether you bring biology, mathematics, engineering, data science, software, or product thinking, there is a role for you. Teams are deliberately cross-functional.',
+  },
+  {
+    q: 'What data will teams work with?',
+    a: 'Teams will work with real brain imaging data provided by Vibraint. The full challenge brief is shared with participants after registration.',
+  },
+  {
+    q: 'What tools will be used?',
+    a: 'Teams build with Claude Code, Anthropic\u2019s AI coding assistant. You\u2019re free to use any additional tools, languages, or frameworks alongside it.',
+  },
+  {
+    q: 'Is the hackathon free?',
+    a: 'Yes. The hackathon is completely free to attend. Registration is required and limited to 60 participants.',
+  },
+  {
+    q: 'Where exactly is the venue?',
+    a: 'Mesh Matrikel1, Gothersgade 11, 1123 Copenhagen K, Denmark. The event takes place at the Workbar Community Stage.',
+  },
+] as const

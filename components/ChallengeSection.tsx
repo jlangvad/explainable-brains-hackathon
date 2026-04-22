@@ -4,8 +4,8 @@ import { CHALLENGE, TAGS } from '@/lib/content'
 
 export function ChallengeSection() {
   return (
-    <>
-      <SectionHeader num="04" title="The Challenge" />
+    <section id="challenge" aria-labelledby="sec-challenge">
+      <SectionHeader num="04" title="The Challenge" id="sec-challenge" />
       <Reveal className="challenge-teaser">
         <p className="challenge-q">{CHALLENGE.question}</p>
         <div className="challenge-note">
@@ -13,14 +13,14 @@ export function ChallengeSection() {
             <p key={i}>{p}</p>
           ))}
         </div>
-        <div className="challenge-tags">
+        <div className="challenge-tags" role="list" aria-label="Challenge topics">
           {TAGS.map(tag => (
-            <span key={tag.label} className={tag.hi ? 'ctag hi' : 'ctag'}>
+            <span key={tag.label} role="listitem" className={tag.hi ? 'ctag hi' : 'ctag'}>
               {tag.label}
             </span>
           ))}
         </div>
       </Reveal>
-    </>
+    </section>
   )
 }

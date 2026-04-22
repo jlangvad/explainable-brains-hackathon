@@ -1,10 +1,16 @@
 import { Reveal } from './Reveal'
 import { CTA, CTA_VENUE_LINE } from '@/lib/content'
-import { REGISTER_URL, VENUE_MAPS_URL } from '@/lib/config'
+import {
+  APPLIED_FUTURES_URL,
+  REGISTER_URL,
+  VENUE_MAPS_URL,
+  VIBRAINT_URL,
+} from '@/lib/config'
 import { ThemeToggle } from './ThemeToggle'
 
 export function CtaSection() {
   return (
+    <footer id="register">
     <Reveal className="cta-section">
       <div>
         <h2 className="cta-headline">
@@ -47,14 +53,31 @@ export function CtaSection() {
           {CTA.hostedBy.map((line, i) => (
             <span key={i}>
               {line}
-              {i < CTA.hostedBy.length - 1 && <br />}
+              <br />
             </span>
           ))}
+          <span>
+            <a
+              href={APPLIED_FUTURES_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="map-link"
+            >
+              Applied Futures
+              <span className="sr-only"> (opens in new tab)</span>
+            </a>
+            <span aria-hidden="true"> · </span>
+            <a href={VIBRAINT_URL} target="_blank" rel="noopener noreferrer" className="map-link">
+              Vibraint
+              <span className="sr-only"> (opens in new tab)</span>
+            </a>
+          </span>
         </div>
         <div className="footer-theme-toggle">
           <ThemeToggle />
         </div>
       </div>
     </Reveal>
+    </footer>
   )
 }

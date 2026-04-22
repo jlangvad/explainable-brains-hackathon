@@ -6,10 +6,12 @@ export function Reveal({
   children,
   className = '',
   as: Tag = 'div',
+  id,
 }: {
   children: ReactNode
   className?: string
   as?: 'div' | 'section'
+  id?: string
 }) {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -33,7 +35,7 @@ export function Reveal({
 
   const composed = ['reveal', className].filter(Boolean).join(' ')
   return (
-    <Tag ref={ref as never} className={composed}>
+    <Tag ref={ref as never} className={composed} id={id}>
       {children}
     </Tag>
   )

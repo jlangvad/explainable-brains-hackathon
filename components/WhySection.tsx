@@ -5,12 +5,12 @@ import { VIBRAINT_SIDEBAR } from '@/lib/content'
 
 export function WhySection() {
   return (
-    <>
-      <SectionHeader num="01" title="The Problem Worth Solving" />
+    <section id="why" aria-labelledby="sec-why">
+      <SectionHeader num="01" title="The Problem Worth Solving" id="sec-why" />
       <div className="why-body">
         <PillarList />
         <div>
-          <div className="sidebar-box">
+          <aside className="sidebar-box">
             <Image
               src="/vibraint-logo.svg"
               alt="Vibraint"
@@ -22,9 +22,9 @@ export function WhySection() {
             {VIBRAINT_SIDEBAR.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
-          </div>
+          </aside>
         </div>
       </div>
-    </>
+    </section>
   )
 }
