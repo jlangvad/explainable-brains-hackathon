@@ -18,7 +18,7 @@ export function FormatSection() {
           <tbody>
             {AGENDA.map(row => (
               <tr key={row.time} className={row.accent ? 'accent' : undefined}>
-                <td><time dateTime={`2026-05-20T${row.time}:00+02:00`}>{row.time}</time></td>
+                <td><time dateTime={`2026-05-26T${row.time}:00+02:00`}>{row.time}</time></td>
                 <td>{row.label}</td>
               </tr>
             ))}

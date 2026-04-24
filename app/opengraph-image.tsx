@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 
-export const alt = 'Explainable Brains Hackathon — Copenhagen, May 20th, 2026'
+export const alt = 'Explainable Brains Hackathon — Copenhagen, May 26th, 2026'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -45,7 +45,7 @@ export default async function OpengraphImage() {
           }}
         >
           <div style={{ width: 56, height: 2, background: '#1a7a4a' }} />
-          <div>Copenhagen · May 20, 2026 · 16:00–19:00</div>
+          <div>Copenhagen · May 26, 2026 · 16:00–19:00</div>
         </div>
 
         <div

@@ -8,9 +8,9 @@ export const APPLIED_FUTURES_URL = 'https://appliedfutures.io/'
 export const VIBRAINT_URL = 'https://vibraint.dk/'
 
 export const SITE = {
-  title: 'Explainable Brains Hackathon — Brain Imaging & AI | Copenhagen, May 20 2026',
+  title: 'Explainable Brains Hackathon — Brain Imaging & AI | Copenhagen, May 26 2026',
   description:
-    'Free neuroscience hackathon in Copenhagen on May 20, 2026. Use Claude Code and real brain imaging data from Vibraint to build interpretable tools for drug discovery. Sponsored by Anthropic. 60 seats.',
+    'Free neuroscience hackathon in Copenhagen on May 26, 2026. Use Claude Code and real brain imaging data from Vibraint to build interpretable tools for drug discovery. Sponsored by Anthropic. 60 seats.',
 } as const
 
 const vercelUrl =

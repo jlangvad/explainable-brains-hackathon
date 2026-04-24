@@ -1,5 +1,5 @@
 export const MASTHEAD = {
-  left: 'Copenhagen · Wednesday May 20th, 2026 · 16:00–19:00',
+  left: 'Copenhagen · Tuesday May 26th, 2026 · 16:00–19:00',
   rightCommunity: 'Claude Code Community Copenhagen',
   rightAppliedFutures: 'Applied Futures',
   rightVibraint: 'Vibraint',
@@ -26,7 +26,7 @@ export const CTA_VENUE_LINE = {
 export const VENUE_FULL_LINE = `${CTA_VENUE_LINE.before}${CTA_VENUE_LINE.place}` as const
 
 export const FACTS = [
-  { label: 'Date', value: 'Wednesday May 20th, 2026' },
+  { label: 'Date', value: 'Tuesday May 26th, 2026' },
   { label: 'Time', value: '16:00 – 19:00' },
   { label: 'Venue', value: VENUE_FULL_LINE },
   { label: 'Participants', value: '60 seats' },
@@ -131,7 +131,7 @@ export const CTA = {
   lines: ['Register.', 'Show up.'],
   emphasis: 'Build something.',
   detail: [
-    'Wednesday May 20th, 2026 · Doors 16:00 · Close 19:00',
+    'Tuesday May 26th, 2026 · Doors 16:00 · Close 19:00',
     'Challenge brief sent after registration',
   ],
   hostedBy: ['Co-hosted by', 'Claude Code Community Copenhagen'],

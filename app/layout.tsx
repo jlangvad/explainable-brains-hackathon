@@ -71,8 +71,8 @@ const jsonLd = {
       '@type': 'Event',
       name: 'Explainable Brains Hackathon',
       description: SITE.description,
-      startDate: '2026-05-20T16:00:00+02:00',
-      endDate: '2026-05-20T19:00:00+02:00',
+      startDate: '2026-05-26T16:00:00+02:00',
+      endDate: '2026-05-26T19:00:00+02:00',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       eventStatus: 'https://schema.org/EventScheduled',
       maximumAttendeeCapacity: 60,
@@ -168,7 +168,7 @@ const jsonLd = {
           name: 'What is the Explainable Brains Hackathon?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The Explainable Brains Hackathon is a free, in-person neuroscience and AI hackathon in Copenhagen, Denmark on May 20, 2026. Cross-disciplinary teams use Claude Code and real brain imaging data from Vibraint to build tools that make complex brain data accessible and interpretable for drug discovery.',
+            text: 'The Explainable Brains Hackathon is a free, in-person neuroscience and AI hackathon in Copenhagen, Denmark on May 26, 2026. Cross-disciplinary teams use Claude Code and real brain imaging data from Vibraint to build tools that make complex brain data accessible and interpretable for drug discovery.',
           },
         },
         {
@@ -184,7 +184,7 @@ const jsonLd = {
           name: 'When and where is the hackathon?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Wednesday May 20, 2026 from 16:00 to 19:00 at Mesh Matrikel1, Højbro Plads 10, 1200 Copenhagen K, Denmark.',
+            text: 'Tuesday May 26, 2026 from 16:00 to 19:00 at Mesh Matrikel1, Højbro Plads 10, 1200 Copenhagen K, Denmark.',
           },
         },
         {

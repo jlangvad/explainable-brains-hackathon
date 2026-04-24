@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-const EVENT_START = new Date('2026-05-20T16:00:00+02:00').getTime()
+const EVENT_START = new Date('2026-05-26T16:00:00+02:00').getTime()
 
 function getTimeLeft() {
   const diff = EVENT_START - Date.now()
@@ -58,7 +58,7 @@ export function MastheadCountdown({ fallback }: { fallback: string }) {
         <span className="countdown-num">{pad(time.seconds)}</span>s
       </span>
       <span className="masthead-sep" aria-hidden="true"> · </span>
-      <span>May 20th, 2026</span>
+      <span>May 26th, 2026</span>
       <span className="masthead-sep" aria-hidden="true"> · </span>
       <span>Copenhagen</span>
       <span className="sr-only">

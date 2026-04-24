@@ -84,7 +84,7 @@ export function Hero() {
                   <span className="sr-only"> (opens in new tab)</span>
                 </a>
               ) : f.label === 'Date' ? (
-                <time dateTime="2026-05-20">{f.value}</time>
+                <time dateTime="2026-05-26">{f.value}</time>
               ) : f.label === 'Time' ? (
                 <time dateTime="16:00/19:00">{f.value}</time>
               ) : (
