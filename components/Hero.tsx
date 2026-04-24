@@ -17,6 +17,18 @@ export function Hero() {
           <p className="hero-subtitle">{HERO.subtitle}</p>
           <p className="hero-definition">{HERO.definition}</p>
           <p className="hero-intro">{HERO.intro}</p>
+          <div className="hero-cta">
+            <a
+              href={REGISTER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="reg-btn"
+              aria-label="Register now (opens in new tab)"
+            >
+              Register Now <span aria-hidden="true">&rarr;</span>
+            </a>
+            <span className="hero-cta-note">Free · 60 seats · Challenge brief sent after registration</span>
+          </div>
         </div>
         <aside className="hero-sponsors" aria-label="Sponsors and partners">
           <div className="sponsor-strip sponsor-strip--vertical">
@@ -54,19 +66,6 @@ export function Hero() {
             </div>
           </div>
         </aside>
-      </div>
-
-      <div className="hero-cta">
-        <a
-          href={REGISTER_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="reg-btn"
-          aria-label="Register now (opens in new tab)"
-        >
-          Register Now <span aria-hidden="true">&rarr;</span>
-        </a>
-        <span className="hero-cta-note">Free · 60 seats · Challenge brief sent after registration</span>
       </div>
 
       <dl className="factbar">

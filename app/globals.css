@@ -209,7 +209,7 @@ h1 .outline {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-top: 2.5rem;
+  margin-top: 1.35rem;
   flex-wrap: wrap;
 }
 .hero-cta-note {
