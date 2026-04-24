@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { HERO, FACTS } from '@/lib/content'
-import { REGISTER_URL, VENUE_MAPS_URL } from '@/lib/config'
+import { HERO } from '@/lib/content'
+import { REGISTER_URL } from '@/lib/config'
 
 export function Hero() {
   return (
@@ -68,32 +68,6 @@ export function Hero() {
         </aside>
       </div>
 
-      <dl className="factbar">
-        {FACTS.map(f => (
-          <div key={f.label} className="fact">
-            <dt className="fact-label">{f.label}</dt>
-            <dd className="fact-value">
-              {f.label === 'Venue' ? (
-                <a
-                  href={VENUE_MAPS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="map-link"
-                >
-                  {f.value}
-                  <span className="sr-only"> (opens in new tab)</span>
-                </a>
-              ) : f.label === 'Date' ? (
-                <time dateTime="2026-05-26">{f.value}</time>
-              ) : f.label === 'Time' ? (
-                <time dateTime="16:00/19:00">{f.value}</time>
-              ) : (
-                f.value
-              )}
-            </dd>
-          </div>
-        ))}
-      </dl>
     </section>
   )
 }

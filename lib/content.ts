@@ -23,15 +23,6 @@ export const CTA_VENUE_LINE = {
   place: 'Mesh Matrikel1 · Copenhagen',
 } as const
 
-export const VENUE_FULL_LINE = `${CTA_VENUE_LINE.before}${CTA_VENUE_LINE.place}` as const
-
-export const FACTS = [
-  { label: 'Date', value: 'Tuesday May 26th, 2026' },
-  { label: 'Time', value: '16:00 – 19:00' },
-  { label: 'Venue', value: VENUE_FULL_LINE },
-  { label: 'Participants', value: '60 seats' },
-  { label: 'Cost', value: 'Free' },
-] as const
 
 export const PILLARS = [
   {
