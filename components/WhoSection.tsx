@@ -17,7 +17,7 @@ export function WhoSection() {
             </li>
           ))}
         </ul>
-        <p className="who-footnote">{WHO_FOOTNOTE}</p>
+        {WHO_FOOTNOTE ? <p className="who-footnote">{WHO_FOOTNOTE}</p> : null}
       </Reveal>
     </section>
   )
