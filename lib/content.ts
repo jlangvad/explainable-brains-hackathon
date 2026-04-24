@@ -11,7 +11,7 @@ export const HERO = {
   titleBottom: 'Brains',
   titleSuffix: 'Hackathon',
   subtitle:
-    'From signals to understanding: A 3-hour sprint to make complex brain data accessible, interpretable, and actionable.',
+    'From signals to understanding: A 3-hour sprint to make complex brain data accessible, interpretable, and actionable — because better tools mean better treatments for brain disease.',
   definition:
     'The Explainable Brains Hackathon is a free neuroscience and AI hackathon in Copenhagen, Denmark. Cross-disciplinary teams use Claude Code and real brain imaging data from Vibraint to build tools that make complex brain data interpretable for drug discovery.',
   intro:
