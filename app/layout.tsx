@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, Lora, JetBrains_Mono } from 'next/font/google'
 import { SITE, SITE_URL } from '@/lib/config'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const bebas = Bebas_Neue({
@@ -230,7 +231,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
