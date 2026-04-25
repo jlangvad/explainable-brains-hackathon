@@ -22,6 +22,20 @@
   color-scheme: dark;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151518;
+    --ink: #e8e6e1;
+    --dim: #9a968f;
+    --text: #c5c2bb;
+    --rule: rgba(255,255,255,0.12);
+    --green: #34d67a;
+    --green-light: #1a2e22;
+    --sidebar-text: #8cc9a3;
+    color-scheme: dark;
+  }
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ── ACCESSIBILITY UTILITIES ── */
@@ -170,7 +184,7 @@ h1 .outline {
 .hero-subtitle {
   font-family: var(--font-lora), serif;
   font-style: italic;
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
   color: var(--dim);
   max-width: 52ch;
   margin-top: 1.8rem;
@@ -179,12 +193,12 @@ h1 .outline {
   padding-left: 1.2rem;
 }
 .hero-definition {
-  font-size: 1rem;
+  font-size: 0.98rem;
   line-height: 1.7;
   color: var(--text);
   max-width: 68ch;
   margin-top: 1.8rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 .hero-intro {
   font-size: 1.05rem;
@@ -579,6 +593,18 @@ a.map-link:visited {
 .sponsor-logo--vibraint {
   height: 2.2rem;
   width: auto;
+}
+
+[data-theme="dark"] .sponsor-logo--anthropic,
+[data-theme="dark"] .sponsor-logo--claude {
+  filter: brightness(0) invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sponsor-logo--anthropic,
+  :root:not([data-theme="light"]) .sponsor-logo--claude {
+    filter: brightness(0) invert(1);
+  }
 }
 .sponsor-divider {
   width: 1px;

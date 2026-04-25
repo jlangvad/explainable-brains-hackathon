@@ -57,7 +57,7 @@ export const VIBRAINT_SIDEBAR = {
 } as const
 
 export const FORMAT_INTRO =
-  'Simple by design. Vibraint presents a real challenge with real data. Teams form across disciplines and build for 90 minutes. Then every team demos a working prototype. No slides, just what you made.'
+  'Simple by design. Vibraint presents a real challenge with real data. Teams form across disciplines and build for 90 minutes. Then every team demos a working prototype. No slides, just what you made. Aimed at STEM students, graduates, and young professionals—including product management. No neuroscience background required. Cross-functional teams mix backgrounds so everyone has a role in the build.'
 
 export const AGENDA: Array<{ time: string; label: string; accent?: boolean }> = [
   { time: '16:00', label: 'Doors open, settle in' },
@@ -97,7 +97,7 @@ export const PROFILES = [
 ] as const
 
 export const WHO_FOOTNOTE =
-  'Aimed at STEM students, graduates, and young professionals—including product management. No neuroscience background required. Cross-functional teams mix backgrounds so everyone has a role in the build.'
+  ''
 
 export const CHALLENGE = {
   question: '\u201CHow can we make brain imaging data accessible and interpretable?\u201D',
