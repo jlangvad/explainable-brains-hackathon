@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     { name: 'Jacob Langvad Nilsson' },
     { name: 'Diana Meda' },
   ],
-  creator: 'Claude Code Community Copenhagen',
+  creator: 'Applied Futures',
   openGraph: {
     title: SITE.title,
     description: SITE.description,
@@ -93,18 +93,20 @@ const jsonLd = {
       organizer: [
         {
           '@type': 'Organization',
-          name: 'Claude Code Community Copenhagen',
-          url: 'https://claude.ai',
-        },
-        {
-          '@type': 'Organization',
           name: 'Applied Futures',
+          url: 'https://appliedfutures.io/',
         },
         {
           '@type': 'Organization',
           name: 'Vibraint',
+          url: 'https://vibraint.dk/',
           description:
             'Vibraint builds tools to accelerate drug discovery for brain diseases, processing complex 3D microscopy scans into interactive, interpretable brain maps.',
+        },
+        {
+          '@type': 'Organization',
+          name: 'Danish Data Science Community',
+          url: 'https://ddsc.io/',
         },
       ],
       sponsor: {
@@ -209,7 +211,7 @@ const jsonLd = {
           name: 'Who is organizing the hackathon?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The hackathon is co-hosted by Claude Code Community Copenhagen, Applied Futures, and Vibraint. It is sponsored by Anthropic. Key organizers include Jacob Langvad Nilsson, Diana Meda, Johanna Perens (CTO of Vibraint), and Alicia Parra Acero (Danish Cancer Institute).',
+            text: 'The hackathon is co-hosted by Applied Futures, Vibraint, and the Danish Data Science Community. It is sponsored by Anthropic. Key organizers include Jacob Langvad Nilsson, Diana Meda, Johanna Perens (CTO of Vibraint), and Alicia Parra Acero (Danish Cancer Institute).',
           },
         },
       ],

@@ -47,9 +47,9 @@ STEM students, graduates, and young professionals — including product manageme
 ## Sponsors and partners
 
 - **Anthropic** — Sponsor
-- **Claude Code Community Copenhagen** — Co-host
 - **Applied Futures** — Co-host
 - **Vibraint** — Data and challenge partner
+- **Danish Data Science Community** — Co-host
 
 ## Venue
 

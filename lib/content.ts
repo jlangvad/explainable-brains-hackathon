@@ -125,7 +125,7 @@ export const CTA = {
     'Tuesday May 26th, 2026 · Doors 16:00 · Close 20:00',
     'Challenge brief sent after registration',
   ],
-  hostedBy: ['Co-hosted by', 'Claude Code Community Copenhagen'],
+  hostedBy: ['Co-hosted by'],
   buttonLabel: 'Register Now \u2192',
 } as const
 
