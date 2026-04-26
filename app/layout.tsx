@@ -73,7 +73,7 @@ const jsonLd = {
       name: 'Explainable Brains Hackathon',
       description: SITE.description,
       startDate: '2026-05-26T16:00:00+02:00',
-      endDate: '2026-05-26T19:00:00+02:00',
+      endDate: '2026-05-26T20:00:00+02:00',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       eventStatus: 'https://schema.org/EventScheduled',
       maximumAttendeeCapacity: 60,
@@ -185,7 +185,7 @@ const jsonLd = {
           name: 'When and where is the hackathon?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Tuesday May 26, 2026 from 16:00 to 19:00 at Mesh Matrikel1, Højbro Plads 10, 1200 Copenhagen K, Denmark.',
+            text: 'Tuesday May 26, 2026 from 16:00 to 20:00 at Mesh Matrikel1, Højbro Plads 10, 1200 Copenhagen K, Denmark.',
           },
         },
         {
