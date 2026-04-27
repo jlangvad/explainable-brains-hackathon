@@ -20,18 +20,18 @@ Teams approach this from different angles: data analysis and visualization, natu
 
 ## The format
 
-Simple by design. Vibraint presents a real challenge with real data. Teams form across disciplines and build for 90 minutes. Then every team demos a working prototype. No slides, just what you made.
+Simple by design. Vibraint presents a real challenge with real data. Teams form across disciplines and build for 2.5 hours. Then every team demos a working prototype. No slides, just what you made.
 
-| Time  | Activity                                  |
-|-------|-------------------------------------------|
-| 16:00 | Doors open                                |
-| 16:05 | Welcome                                   |
-| 16:10 | Challenge brief presented                 |
-| 16:25 | Teams form and build (90 min)             |
-| 17:55 | Demos (3 min per team)                    |
-| 18:20 | Judging and wrap-up                       |
-| 18:40 | Networking                                |
-| 20:00 | Close                                     |
+| Time  | Activity                                                                 |
+|-------|---------------------------------------------------------------------------|
+| 16:00 | Doors open, settle in                                                    |
+| 16:05 | Welcome (Jacob and Diana)                                              |
+| 16:10 | Challenge brief (Johanna, Vibraint and Alicia, Danish Cancer Institute) |
+| 16:25 | Teams form and build, 2.5 hours                                          |
+| 18:55 | Demos, 3 min per team                                                    |
+| 19:20 | Judging and wrap-up                                                      |
+| 19:40 | Networking                                                               |
+| 20:00 | Close                                                                    |
 
 ## Who it's for
 
