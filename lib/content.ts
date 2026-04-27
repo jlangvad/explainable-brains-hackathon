@@ -34,7 +34,7 @@ export const PILLARS = [
   {
     n: '02',
     title: 'Data Is Ahead of Our Tools',
-    text: "CNS drug development has one of the highest failure rates in medicine. It is not for lack of data. Brain research generates vast volumes of imaging, spatial, and molecular information. The problem is that most of it stays locked in specialist pipelines, inaccessible to the people who could act on it. The science is ready. The tooling isn't.",
+    text: "Developing treatments for brain diseases has one of the highest failure rates in medicine, with fewer than 1 in 10 candidates ever reaching patients. It is not for lack of data. Brain research generates vast volumes of imaging, spatial, and molecular information. The problem is that most of it stays locked in specialist pipelines, inaccessible to the people who could act on it. The science is ready. The tooling isn't.",
   },
   {
     n: '03',
@@ -44,7 +44,7 @@ export const PILLARS = [
   {
     n: '04',
     title: 'Building at the Intersection',
-    text: 'Progress on these problems requires people from very different fields to actually work together, not just talk past each other at conferences. AI tools like Claude Code are lowering the barrier to building functional prototypes fast. This hackathon brings STEM professionals together around a shared problem and four hours to explore it.',
+    text: 'Progress on these problems requires people from very different fields to work together. AI tools like Claude Code are lowering the barrier to creating functional prototypes fast, making interdisciplinary collaboration more productive than ever. This hackathon brings STEM professionals together around a shared problem to discover new ways of tackling it.',
   },
 ] as const
 
@@ -58,7 +58,7 @@ export const VIBRAINT_SIDEBAR = {
 } as const
 
 export const FORMAT_INTRO =
-  'Simple by design. Vibraint presents a real challenge with real data. Teams form across disciplines and build for 2.5 hours. Then every team demos a working prototype. No slides, just what you made. Aimed at STEM students, graduates, and young professionals—including product management. No neuroscience background required. Cross-functional teams mix backgrounds so everyone has a role in the build.'
+  'Simple by design. Vibraint presents a real challenge with real data. Teams form across disciplines and build for 2.5 hours. Then every team demos a working prototype. No slides, just what you made. Aimed at STEM students, graduates, and young professionals, including product management. No neuroscience background required. Cross-functional teams mix backgrounds so everyone has a role in the build.'
 
 export const AGENDA: Array<{ time: string; label: string; accent?: boolean }> = [
   { time: '16:00', label: 'Doors open, settle in' },

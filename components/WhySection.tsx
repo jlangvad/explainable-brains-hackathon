@@ -12,11 +12,19 @@ export function WhySection() {
         <div>
           <aside className="sidebar-box">
             <Image
-              src="/vibraint-logo.svg"
+              src="/logo_text_white_bg.svg"
               alt="Vibraint"
               width={160}
               height={44}
-              className="sidebar-logo"
+              className="sidebar-logo sidebar-logo--light"
+            />
+            <Image
+              src="/logo_text_black_bg.svg"
+              alt=""
+              width={160}
+              height={44}
+              aria-hidden="true"
+              className="sidebar-logo sidebar-logo--dark"
             />
             <h3>{VIBRAINT_SIDEBAR.heading}</h3>
             {VIBRAINT_SIDEBAR.paragraphs.map((p, i) => (

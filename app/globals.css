@@ -596,15 +596,13 @@ a.map-link:visited {
 }
 
 [data-theme="dark"] .sponsor-logo--anthropic,
-[data-theme="dark"] .sponsor-logo--claude,
-[data-theme="dark"] .sponsor-logo--vibraint {
+[data-theme="dark"] .sponsor-logo--claude {
   filter: brightness(0) invert(1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .sponsor-logo--anthropic,
-  :root:not([data-theme="light"]) .sponsor-logo--claude,
-  :root:not([data-theme="light"]) .sponsor-logo--vibraint {
+  :root:not([data-theme="light"]) .sponsor-logo--claude {
     filter: brightness(0) invert(1);
   }
 }
@@ -736,4 +734,31 @@ a.map-link:visited {
   }
   .challenge-tags { gap: 0.4rem; }
   .ctag { font-size: 0.65rem; padding: 0.35em 0.7em; }
+}
+
+/* Vibraint dedicated light/dark logo variants. Placed last so visibility wins
+   on source order against the responsive `display: block` rules above; the
+   `.sponsor-strip` ancestor matches their specificity (two classes). */
+.sponsor-strip .sponsor-logo--vibraint-dark,
+.sidebar-logo--dark {
+  display: none;
+}
+[data-theme="dark"] .sponsor-strip .sponsor-logo--vibraint-light,
+[data-theme="dark"] .sidebar-logo--light {
+  display: none;
+}
+[data-theme="dark"] .sponsor-strip .sponsor-logo--vibraint-dark,
+[data-theme="dark"] .sidebar-logo--dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sponsor-strip .sponsor-logo--vibraint-light,
+  :root:not([data-theme="light"]) .sidebar-logo--light {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .sponsor-strip .sponsor-logo--vibraint-dark,
+  :root:not([data-theme="light"]) .sidebar-logo--dark {
+    display: block;
+  }
 }

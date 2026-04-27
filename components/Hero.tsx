@@ -57,11 +57,19 @@ export function Hero() {
             <div className="sponsor-block">
               <span className="sponsor-label">Partner</span>
               <Image
-                src="/vibraint-logo.svg"
+                src="/logo_text_white_bg.svg"
                 alt="Vibraint"
                 width={160}
                 height={32}
-                className="sponsor-logo sponsor-logo--vibraint"
+                className="sponsor-logo sponsor-logo--vibraint sponsor-logo--vibraint-light"
+              />
+              <Image
+                src="/logo_text_black_bg.svg"
+                alt=""
+                width={160}
+                height={32}
+                aria-hidden="true"
+                className="sponsor-logo sponsor-logo--vibraint sponsor-logo--vibraint-dark"
               />
             </div>
           </div>
