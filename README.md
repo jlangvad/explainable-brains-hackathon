@@ -58,7 +58,7 @@ Hojbro Plads 10, 1200 Copenhagen K, Denmark
 
 ## Register
 
-The hackathon is free. 60 seats. [Register here.](https://luma.com/aes5eyzk)
+The hackathon is free. 40 seats. [Register here.](https://luma.com/aes5eyzk)
 
 ---
 

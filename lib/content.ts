@@ -140,11 +140,15 @@ export const FAQ = [
   },
   {
     q: 'What tools will be used?',
-    a: 'Teams build with Claude Code, Anthropic\u2019s AI coding assistant. You\u2019re free to use any additional tools, languages, or frameworks alongside it.',
+    a: 'Teams build with Claude Code, Anthropic\u2019s AI coding assistant. Every participant gets free Claude Console API credits to use during the event. You\u2019re free to bring any additional tools, languages, or frameworks alongside it.',
+  },
+  {
+    q: 'Who are the judges?',
+    a: 'Judges will be announced closer to the event.',
   },
   {
     q: 'Is the hackathon free?',
-    a: 'Yes. The hackathon is completely free to attend. Registration is required and limited to 60 participants.',
+    a: 'Yes. The hackathon is completely free to attend. Registration is required and limited to 40 participants.',
   },
   {
     q: 'Where exactly is the venue?',
