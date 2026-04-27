@@ -45,7 +45,7 @@ export default async function OpengraphImage() {
           }}
         >
           <div style={{ width: 56, height: 2, background: '#1a7a4a' }} />
-          <div>Copenhagen · May 26, 2026 · 16:00–19:00</div>
+          <div>Copenhagen · May 26, 2026 · 16:00–20:00</div>
         </div>
 
         <div

@@ -1,8 +1,8 @@
 export const MASTHEAD = {
-  left: 'Copenhagen · Tuesday May 26th, 2026 · 16:00–19:00',
-  rightCommunity: 'Claude Code Community Copenhagen',
+  left: 'Copenhagen · Tuesday May 26th, 2026 · 16:00–20:00',
   rightAppliedFutures: 'Applied Futures',
   rightVibraint: 'Vibraint',
+  rightDanishDataScience: 'Danish Data Science Community',
 } as const
 
 export const HERO = {
@@ -67,7 +67,7 @@ export const AGENDA: Array<{ time: string; label: string; accent?: boolean }> = 
   { time: '17:55', label: 'Demos, 3 min per team' },
   { time: '18:20', label: 'Judging and wrap-up' },
   { time: '18:40', label: 'Networking' },
-  { time: '19:00', label: 'Close' },
+  { time: '20:00', label: 'Close' },
 ]
 
 export const WHO_INTRO =
@@ -82,7 +82,7 @@ export const PROFILES = [
   {
     role: 'Co-host · Danish Data Science Community',
     name: 'Diana Meda',
-    desc: 'AI & Data Engineer and co-host from the Claude Code Community and Danish Data Science Community, connecting the data science and AI builder communities in Copenhagen.',
+    desc: 'AI & Data Engineer representing the Danish Data Science Community, connecting the data science and AI builder communities in Copenhagen.',
   },
   {
     role: 'Neuroscience & Computer Vision Advisor · Vibraint',
@@ -122,10 +122,10 @@ export const CTA = {
   lines: ['Register.', 'Show up.'],
   emphasis: 'Build something.',
   detail: [
-    'Tuesday May 26th, 2026 · Doors 16:00 · Close 19:00',
+    'Tuesday May 26th, 2026 · Doors 16:00 · Close 20:00',
     'Challenge brief sent after registration',
   ],
-  hostedBy: ['Co-hosted by', 'Claude Code Community Copenhagen'],
+  hostedBy: ['Co-hosted by'],
   buttonLabel: 'Register Now \u2192',
 } as const
 

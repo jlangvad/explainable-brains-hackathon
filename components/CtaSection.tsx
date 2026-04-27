@@ -2,6 +2,7 @@ import { Reveal } from './Reveal'
 import { CTA, CTA_VENUE_LINE } from '@/lib/content'
 import {
   APPLIED_FUTURES_URL,
+  DANISH_DATA_SCIENCE_URL,
   REGISTER_URL,
   VENUE_MAPS_URL,
   VIBRAINT_URL,
@@ -69,6 +70,16 @@ export function CtaSection() {
             <span aria-hidden="true"> · </span>
             <a href={VIBRAINT_URL} target="_blank" rel="noopener noreferrer" className="map-link">
               Vibraint
+              <span className="sr-only"> (opens in new tab)</span>
+            </a>
+            <span aria-hidden="true"> · </span>
+            <a
+              href={DANISH_DATA_SCIENCE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="map-link"
+            >
+              Danish Data Science Community
               <span className="sr-only"> (opens in new tab)</span>
             </a>
           </span>

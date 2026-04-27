@@ -596,13 +596,15 @@ a.map-link:visited {
 }
 
 [data-theme="dark"] .sponsor-logo--anthropic,
-[data-theme="dark"] .sponsor-logo--claude {
+[data-theme="dark"] .sponsor-logo--claude,
+[data-theme="dark"] .sponsor-logo--vibraint {
   filter: brightness(0) invert(1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .sponsor-logo--anthropic,
-  :root:not([data-theme="light"]) .sponsor-logo--claude {
+  :root:not([data-theme="light"]) .sponsor-logo--claude,
+  :root:not([data-theme="light"]) .sponsor-logo--vibraint {
     filter: brightness(0) invert(1);
   }
 }

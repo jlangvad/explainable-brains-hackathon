@@ -7,6 +7,8 @@ export const APPLIED_FUTURES_URL = 'https://appliedfutures.io/'
 
 export const VIBRAINT_URL = 'https://vibraint.dk/'
 
+export const DANISH_DATA_SCIENCE_URL = 'https://ddsc.io/'
+
 export const SITE = {
   title: 'Explainable Brains Hackathon — Brain Imaging & AI | Copenhagen, May 26 2026',
   description:
