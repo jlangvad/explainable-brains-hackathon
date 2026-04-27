@@ -76,7 +76,7 @@ export default async function OpengraphImage() {
             paddingLeft: 20,
           }}
         >
-          From signals to understanding — a 3-hour sprint to make complex brain imaging data accessible, interpretable, and actionable — because better tools mean better treatments for brain disease.
+          From signals to understanding — a 4-hour sprint to make complex brain imaging data accessible, interpretable, and actionable — because better tools mean better treatments for brain disease.
         </div>
       </div>
     ),

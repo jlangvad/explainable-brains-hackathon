@@ -2,6 +2,7 @@ import { Reveal } from './Reveal'
 import { CTA, CTA_VENUE_LINE } from '@/lib/content'
 import {
   APPLIED_FUTURES_URL,
+  DANISH_CANCER_INSTITUTE_URL,
   DANISH_DATA_SCIENCE_URL,
   REGISTER_URL,
   VENUE_MAPS_URL,
@@ -58,6 +59,21 @@ export function CtaSection() {
             </span>
           ))}
           <span>
+            <a href={VIBRAINT_URL} target="_blank" rel="noopener noreferrer" className="map-link">
+              Vibraint
+              <span className="sr-only"> (opens in new tab)</span>
+            </a>
+            <span aria-hidden="true"> · </span>
+            <a
+              href={DANISH_CANCER_INSTITUTE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="map-link"
+            >
+              Danish Cancer Institute
+              <span className="sr-only"> (opens in new tab)</span>
+            </a>
+            <span aria-hidden="true"> · </span>
             <a
               href={APPLIED_FUTURES_URL}
               target="_blank"
@@ -65,11 +81,6 @@ export function CtaSection() {
               className="map-link"
             >
               Applied Futures
-              <span className="sr-only"> (opens in new tab)</span>
-            </a>
-            <span aria-hidden="true"> · </span>
-            <a href={VIBRAINT_URL} target="_blank" rel="noopener noreferrer" className="map-link">
-              Vibraint
               <span className="sr-only"> (opens in new tab)</span>
             </a>
             <span aria-hidden="true"> · </span>

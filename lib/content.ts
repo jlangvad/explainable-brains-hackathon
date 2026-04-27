@@ -3,6 +3,7 @@ export const MASTHEAD = {
   rightAppliedFutures: 'Applied Futures',
   rightVibraint: 'Vibraint',
   rightDanishDataScience: 'Danish Data Science Community',
+  rightDanishCancerInstitute: 'Danish Cancer Institute',
 } as const
 
 export const HERO = {
@@ -11,7 +12,7 @@ export const HERO = {
   titleBottom: 'Brains',
   titleSuffix: 'Hackathon',
   subtitle:
-    'From signals to understanding: A 3-hour sprint to make complex brain data accessible, interpretable, and actionable — because better tools mean better treatments for brain disease.',
+    'From signals to understanding: A 4-hour sprint to make complex brain data accessible, interpretable, and actionable — because better tools mean better treatments for brain disease.',
   definition:
     'The Explainable Brains Hackathon is a free neuroscience and AI hackathon in Copenhagen, Denmark. Cross-disciplinary teams use Claude Code and real brain imaging data from Vibraint to build tools that make complex brain data interpretable for drug discovery.',
   intro:
@@ -43,7 +44,7 @@ export const PILLARS = [
   {
     n: '04',
     title: 'Building at the Intersection',
-    text: 'Progress on these problems requires people from very different fields to actually work together, not just talk past each other at conferences. AI tools like Claude Code are lowering the barrier to building functional prototypes fast. This hackathon brings STEM professionals together around a shared problem and a few hours to explore it.',
+    text: 'Progress on these problems requires people from very different fields to actually work together, not just talk past each other at conferences. AI tools like Claude Code are lowering the barrier to building functional prototypes fast. This hackathon brings STEM professionals together around a shared problem and four hours to explore it.',
   },
 ] as const
 
@@ -57,16 +58,20 @@ export const VIBRAINT_SIDEBAR = {
 } as const
 
 export const FORMAT_INTRO =
-  'Simple by design. Vibraint presents a real challenge with real data. Teams form across disciplines and build for 90 minutes. Then every team demos a working prototype. No slides, just what you made. Aimed at STEM students, graduates, and young professionals—including product management. No neuroscience background required. Cross-functional teams mix backgrounds so everyone has a role in the build.'
+  'Simple by design. Vibraint presents a real challenge with real data. Teams form across disciplines and build for 2.5 hours. Then every team demos a working prototype. No slides, just what you made. Aimed at STEM students, graduates, and young professionals—including product management. No neuroscience background required. Cross-functional teams mix backgrounds so everyone has a role in the build.'
 
 export const AGENDA: Array<{ time: string; label: string; accent?: boolean }> = [
   { time: '16:00', label: 'Doors open, settle in' },
-  { time: '16:05', label: 'Welcome: Jacob & Diana' },
-  { time: '16:10', label: 'Challenges presented: Johanna & Alicia', accent: true },
-  { time: '16:25', label: 'Teams form and build, 90 minutes', accent: true },
-  { time: '17:55', label: 'Demos, 3 min per team' },
-  { time: '18:20', label: 'Judging and wrap-up' },
-  { time: '18:40', label: 'Networking' },
+  { time: '16:05', label: 'Welcome (Jacob and Diana)' },
+  {
+    time: '16:10',
+    label: 'Challenge brief (Johanna, Vibraint and Alicia, Danish Cancer Institute)',
+    accent: true,
+  },
+  { time: '16:25', label: 'Teams form and build, 2.5 hours', accent: true },
+  { time: '18:55', label: 'Demos, 3 min per team' },
+  { time: '19:20', label: 'Judging and wrap-up' },
+  { time: '19:40', label: 'Networking' },
   { time: '20:00', label: 'Close' },
 ]
 

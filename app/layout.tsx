@@ -149,6 +149,7 @@ const jsonLd = {
           affiliation: {
             '@type': 'Organization',
             name: 'Danish Cancer Institute',
+            url: 'https://www.cancer.dk/danish-cancer-institute/',
           },
         },
       ],
