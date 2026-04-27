@@ -27,7 +27,7 @@ export function Hero() {
             >
               Register Now <span aria-hidden="true">&rarr;</span>
             </a>
-            <span className="hero-cta-note">Free · 60 seats · Challenge brief sent after registration</span>
+            <span className="hero-cta-note">Free · 40 seats · Challenge brief sent after registration</span>
           </div>
         </div>
         <aside className="hero-sponsors" aria-label="Sponsors and partners">

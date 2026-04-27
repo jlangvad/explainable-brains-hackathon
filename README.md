@@ -1,6 +1,6 @@
 # Explainable Brains Hackathon
 
-**Copenhagen · Tuesday May 26th, 2026 · 16:00 - 19:00**
+**Copenhagen · Tuesday May 26th, 2026 · 16:00 - 20:00**
 
 The Explainable Brains Hackathon is a free, in-person neuroscience and AI hackathon in Copenhagen, Denmark. Cross-disciplinary teams use [Claude Code](https://claude.ai) and real brain imaging data from [Vibraint](https://vibraint.dk/) to build tools that make complex brain data interpretable for drug discovery.
 
@@ -31,7 +31,7 @@ Simple by design. Vibraint presents a real challenge with real data. Teams form 
 | 17:55 | Demos (3 min per team)                    |
 | 18:20 | Judging and wrap-up                       |
 | 18:40 | Networking                                |
-| 19:00 | Close                                     |
+| 20:00 | Close                                     |
 
 ## Who it's for
 
@@ -58,7 +58,7 @@ Hojbro Plads 10, 1200 Copenhagen K, Denmark
 
 ## Register
 
-The hackathon is free. 60 seats. [Register here.](https://luma.com/aes5eyzk)
+The hackathon is free. 40 seats. [Register here.](https://luma.com/aes5eyzk)
 
 ---
 

@@ -76,7 +76,7 @@ const jsonLd = {
       endDate: '2026-05-26T20:00:00+02:00',
       eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
       eventStatus: 'https://schema.org/EventScheduled',
-      maximumAttendeeCapacity: 60,
+      maximumAttendeeCapacity: 40,
       isAccessibleForFree: true,
       location: {
         '@type': 'Place',
@@ -195,7 +195,7 @@ const jsonLd = {
           name: 'How much does it cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The hackathon is completely free. Registration is required and limited to 60 participants.',
+            text: 'The hackathon is completely free. Registration is required and limited to 40 participants.',
           },
         },
         {
